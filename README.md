@@ -15,11 +15,11 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 
 ## 現在の進捗
 
-- Closed / Completed: 20問
+- Closed / Completed: 21問
 - Closed / Duplicate (`Replace`): 4問
 - Open / Review: 2問
-- Open / Todo: 14問
-- Open Issue合計: 16問
+- Open / Todo: 13問
+- Open Issue合計: 15問
 
 未消化問題は [Open Issues](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues?q=is%3Aissue%20state%3Aopen) だけ見れば確認できます。
 
@@ -32,7 +32,7 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 | 03 | [#3](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/3) | 3-requester Round-Robin Arbiter | Done | canonical |
 | 04 | [#4](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/4) | 2-stage Elastic Pipeline | Blogged | canonical |
 | 05 | [#5](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/5) | Pulse CDC — Toggle Synchronizer | Blogged | canonical |
-| 06 | [#6](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/6) | Async Input + Debounce | Todo | canonical |
+| 06 | [#6](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/6) | Async Input + Debounce | Done | canonical |
 | 07 | [#7](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/7) | Fixed-latency Operation Wrapper | Todo | canonical |
 | 08 | [#8](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/8) | W1C Interrupt Status | Todo | canonical |
 | 09 | [#9](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/9) | LSB Priority Encoder | Done | canonical |
