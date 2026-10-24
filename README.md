@@ -15,11 +15,11 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 
 ## 現在の進捗
 
-- Closed / Completed: 21問
+- Closed / Completed: 22問
 - Closed / Duplicate (`Replace`): 4問
-- Open / Review: 2問
+- Open / Review: 1問
 - Open / Todo: 13問
-- Open Issue合計: 15問
+- Open Issue合計: 14問
 
 未消化問題は [Open Issues](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues?q=is%3Aissue%20state%3Aopen) だけ見れば確認できます。
 
@@ -45,7 +45,7 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 | 16 | [#16](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/16) | Ready/Valid Fork | Done | canonical |
 | 17 | [#17](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/17) | Ready/Valid Join | Done | canonical |
 | 18 | [#18](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/18) | Credit-based Flow Control | Done | canonical |
-| 19 | [#19](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/19) | In-order Completion Queue | Review | canonical |
+| 19 | [#19](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/19) | In-order Completion Queue | Blogged | [blog](blog/day19-in-order-completion-queue.md) |
 | 20 | [#20](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/20) | Banked Register File | Review | canonical |
 | 21 | [#21](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/21) | Store-to-Load Forwarding | Todo | canonical |
 | 22 | [#22](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/22) | Killable Pipeline | Todo | canonical |
