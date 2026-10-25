@@ -8,18 +8,68 @@
 
 課題の詳細は[Day20 Issue](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/20)。
 
-## 今回の問題
+## 今回の問題：2-read / 1-writeのBanked Register File
 
-デフォルトでは32本の32-bitレジスタを2つのbankに分ける。read portは2本、write portは1本。各bankにはread portとwrite portが1本ずつあると考える。
+今回作るのは、**レジスタを複数bankへ分散して、read requestを競合しない範囲で並列処理する回路**。2本のread requestが同時に届いても、同じbankを指定した場合はread portが足りないため、どちらかをstallさせる。
 
-- 異なるbankへの2件のreadは同時受理する。
-- 同じbankへの2件のreadは競合する。port0を優先し、port1はstallさせる。
-- writeはreadと独立して受理する。
-- readは組合せ出力、writeはposedgeで更新する。
-- 同一addressのread/writeでは、posedge直前のread値は旧データ、posedge後は新データになる。
-- resetはactive-low synchronous reset。
+[元の課題Issue #20](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/20)の仕様を、記事だけで追えるようにまとめる。
 
-本格的なCPU Register Fileではwritebackの多重化やbypass、タイミング制約なども考えるが、今回はbank分割とconflict arbitrationに論点を絞る。
+### 容量・ポート・アドレス
+
+- デフォルトは`NUM_REGS=32`、`DATA_W=32`、`NUM_BANKS=2`（2 banks × 16 rows）。addressは0〜31、`ADDR_W=$clog2(NUM_REGS)`。
+- `NUM_REGS`と`NUM_BANKS`はいずれも2のべき乗、`NUM_REGS>=NUM_BANKS>=2`。4-bank構成も検討対象。
+- **bank = address % NUM_BANKS**、**row = address / NUM_BANKS**。デフォルトでは5bit addressの下位1bitがbank、上位4bitがrow。
+- 全体のread requestは**2ポート**、write requestは**1ポート**。各bankは1 read + 1 writeポートを持つ。
+- `rd_valid[1:0]`と`rd_ready[1:0]`の各bitがport1/port0に対応し、readの受理は`rd_valid[p] && rd_ready[p]`。addressは`rd_addr0`/`rd_addr1`、dataは`rd_data0`/`rd_data1`。
+- writeは`wr_en`/`wr_addr`/`wr_data`。writeのstallはなくposedgeで更新。
+- `rst_n`はactive-low**同期reset**。posedgeで全レジスタを0にする。Register 0も普通に書き込み可能。
+
+モジュールの外部インターフェースは次のとおり（解答部分は省略）。
+
+```systemverilog
+module sv020_banked_register #(
+    parameter int unsigned NUM_REGS  = 32,
+    parameter int unsigned DATA_W    = 32,
+    parameter int unsigned NUM_BANKS = 2,
+    parameter int unsigned ADDR_W    = $clog2(NUM_REGS)
+) (
+    input  logic              clk, rst_n,
+    input  logic [1:0]        rd_valid,
+    output logic [1:0]        rd_ready,
+    input  logic [ADDR_W-1:0] rd_addr0, rd_addr1,
+    output logic [DATA_W-1:0] rd_data0, rd_data1,
+    input  logic              wr_en,
+    input  logic [ADDR_W-1:0] wr_addr,
+    input  logic [DATA_W-1:0] wr_data
+);
+    // ここにRTLを実装する
+endmodule
+```
+
+### 受理ルールとread/writeのタイミング
+
+- **別bankへの同時read**は両方受理する。
+- **同一bankへの同時read**はport0固定優先。port1は`rd_ready[1]=0`でstall。**同一addressへの2readも競合**として扱う。
+- port0が無効なら、port1は単独で受理できる。stallされたportの送信側はvalidとaddrを保持して再試行する（内部request FIFOは持たない）。
+- 受理されたread結果は**同じcycleに組合せ出力**される。`rd_ready=0`のportのdataはdon't care。read側は非パイプライン。
+- writeとreadは同じbankでも並列に動作し、writeのためにreadのreadyは下げない。
+- **同一addressのread-during-write**は、posedgeの前に旧値、posedge後に更新値を観測する。bypass/forwardingはしない。
+
+| `rd_valid` | addr0 | addr1 | 期待`rd_ready` | 説明 |
+|---|---:|---:|---|---|
+| `2'b01` | 2 | - | `2'b01` | port0単独 |
+| `2'b10` | - | 5 | `2'b10` | port1単独 |
+| `2'b11` | 2 | 3 | `2'b11` | bank0とbank1、両方accept |
+| `2'b11` | 2 | 4 | `2'b01` | bank0同士、port0優先 |
+| `2'b11` | 2 | 2 | `2'b01` | 同一addressでも競合 |
+
+### 検証してほしいCorner Case
+
+reset後に全addressが0であること、異なるbank/rowへの書き込みと読み出し、別bank同時read、同一bank競合とport1 retry、port1単独read、read/write同一bank・異address、同一addressのread/writeのposedge前後、reset途中投入、`NUM_BANKS=4`を確認する。
+
+さらに元のIssueは`NUM_REGS=NUM_BANKS`（1 bankあたり1 entry）も許すが、後述の最終稿では`$clog2(1)=0`によるrow addressの境界条件が未対応。**問題の要求範囲と最終稿の実装済み範囲は区別する**。
+
+以下では、実際に書いてみて修正した点を順番に見ていく。
 
 ## Bank番号とRow番号の対応
 
