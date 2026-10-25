@@ -8,23 +8,82 @@ Queueといっても、単に入ったものを順に出すFIFOとは少し違�
 
 実装を何度か見直して、最終的にはslot番号をtagとし、拡張したhead/tail pointerでFull/Emptyを判定する形にした。
 
-## 問題
+## 問題：In-order Completion Queueを作る
 
-[Day19のIssue](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/19) の仕様に従う。
+今回の課題は、**投入順と演算完了順が異なっていても、投入順に結果を出す回路**を作ること。命令A→B→Cを順に投入し、結果がC→B→Aの順に届いたとしても、retirementはA→B→Cでなければならない。
 
-デフォルトはDEPTH=4、DATA_W=32。各cycleに最大1件のAllocation、Completion、Retirementを扱う。
+[元の課題Issue #19](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/19)を見なくても分かるよう、今回の実装で必要な入出力と動作条件をここにまとめておく。
 
-例えば、次のようなケース。
+### インターフェースとパラメータ
 
-```text
-Allocation : A -> B -> C
-Completion :      B -> C -> A
-Retirement :                A -> B -> C
+- `DEPTH=4`（2以上、**3など非2冪もサポート**）、`DATA_W=32`、`TAG_W=max(1,$clog2(DEPTH))`。
+- `clk` と active-low **同期reset** `rst_n`。resetのposedgeで全slotを空にする。
+- Allocation：`alloc_valid` / `alloc_ready` / `alloc_tag[TAG_W-1:0]`。handshakeでtail slotを確保し、**slot番号をtagとして発行**する。
+- Completion：`complete_valid` / `complete_ready` / `complete_tag` / `complete_data[DATA_W-1:0]`。tagが示す、allocate済みで未完了のslotに結果を書き込む。
+- Retirement：`retire_valid` / `retire_ready` / `retire_tag` / `retire_data`。**最古の完了済みentry**だけをheadから出力する。
+- 各ポート最大1件/cycle。イベント成立条件は`valid && ready`。状態更新はposedge。
+
+インターフェースの骨格は以下。
+
+```systemverilog
+module in_order_completion_queue #(
+    parameter int unsigned DEPTH  = 4,
+    parameter int unsigned DATA_W = 32,
+    parameter int unsigned TAG_W  = (DEPTH <= 1) ? 1 : $clog2(DEPTH)
+) (
+    input  logic              clk, rst_n,
+    input  logic              alloc_valid,
+    output logic              alloc_ready,
+    output logic [TAG_W-1:0]  alloc_tag,
+    input  logic              complete_valid,
+    output logic              complete_ready,
+    input  logic [TAG_W-1:0]  complete_tag,
+    input  logic [DATA_W-1:0] complete_data,
+    output logic              retire_valid,
+    input  logic              retire_ready,
+    output logic [TAG_W-1:0]  retire_tag,
+    output logic [DATA_W-1:0] retire_data
+);
+    // ここにRTLを実装する
+endmodule
 ```
 
-B、Cが先にcompleteしていても、Aがcompleteするまではretireしない。
+### 必ず満たす動作
 
-今回は簡略化のため、allocationで払い出すtagをqueueのslot番号そのものとする。full時のsame-cycle retireを利用したallocationや、completionした瞬間のsame-cycle retire bypassは行わない。
+| 状況 | 期待動作 |
+|---|---|
+| Empty | `alloc_ready=1`, `retire_valid=0` |
+| Full | `alloc_ready=0`。同cycle retireが起きてもそのcycleのallocationは受理しない |
+| 後続entryだけ先にcomplete | head未完了なら`retire_valid=0` |
+| headが完了 | `retire_valid=1`。下流が`retire_ready=0`ならtag/dataを保持 |
+| Completionのtagが無効、未allocateまたは既完了 | `complete_ready=0`、状態は変えない |
+| headへのcompletionが同cycle到着 | **そのcycleのretireには使わない**。次cycleから出力可能 |
+| 異なるslotのallocate・complete・retire | 同じcycleに並行して処理できる |
+| retire後にslot再利用 | 次回allocationでは`complete=0`、旧データを有効結果として出さない |
+
+tagはslot番号なのでretire後に再利用される。この問題では**前の世代の遅延completionは再利用したslotへ到着しない**ことを入力契約とし、generation bitやflush・例外処理は対象外とする。data/tagはretire_valid=0の間はdon't care。
+
+### 具体的なタイミング例
+
+`DEPTH=4`、毎cycleで必要なreadyが立っているとする。
+
+| posedge | 起きるイベント | その結果 |
+|---:|---|---|
+| 1 | Aをallocate（tag0） | A未完了 |
+| 2 | Bをallocate（tag1） | A/B未完了 |
+| 3 | Cをallocate（tag2） | A/B/C未完了 |
+| 4 | Cをcomplete（tag2） | A/B未完了、C完了 |
+| 5 | Bをcomplete（tag1） | A未完了、B/C完了 |
+| 6 | Aをcomplete（tag0） | A/B/C完了 |
+| 7 | Aをretire | B/Cが残る |
+| 8 | Bをretire | Cが残る |
+| 9 | Cをretire | Empty |
+
+### 検証してほしいCorner Case
+
+最低限、`DEPTH=3`でのwrapとfull/empty、逆順completion、head未完了によるstall、retire_readyによる出力保持、full→retire→翌cycleのallocation、3種類の同時handshake、二重completionと範囲外tag、途中reset、tag再利用を確認する。
+
+以下では、この課題を実装して特に悩んだ箇所を順番に振り返る。
 
 ## Entryの管理
 
