@@ -50,7 +50,7 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 | 21 | [#21](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/21) | Store-to-Load Forwarding | Todo | canonical |
 | 22 | [#22](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/22) | Killable Pipeline | Todo | canonical |
 | 23 | [#23](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/23) | 2-master→1-slave RR Ready/Valid Arbiter | Todo | close to #12/#15 |
-| 24 | [#24](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/24) | Tree-PLRU Replacement Controller | Done | canonical |
+| 24 | [#24](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/24) | Tree-PLRU Replacement Controller | Blogged | [blog](blog/day24-tree-plru.md) |
 | 25 | [#25](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/25) | SEC-DED ECC for 32-bit Data | Done | canonical |
 | 26 | [#26](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/26) | Ready/Valid Join variant | Replace | duplicate of #17 |
 | 27 | [#27](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/27) | 2-bit Saturating Counter BHT Branch Predictor | Blogged | canonical |
