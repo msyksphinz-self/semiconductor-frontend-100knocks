@@ -15,11 +15,11 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 
 ## 現在の進捗
 
-- Closed / Completed: 23問
+- Closed / Completed: 24問
 - Closed / Duplicate (`Replace`): 4問
 - Open / Review: 1問
-- Open / Todo: 12問
-- Open Issue合計: 13問
+- Open / Todo: 11問
+- Open Issue合計: 12問
 
 未消化問題は [Open Issues](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues?q=is%3Aissue%20state%3Aopen) だけ見れば確認できます。
 
@@ -34,7 +34,7 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 | 05 | [#5](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/5) | Pulse CDC — Toggle Synchronizer | Blogged | canonical |
 | 06 | [#6](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/6) | Async Input + Debounce | Done | canonical |
 | 07 | [#7](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/7) | Fixed-latency Operation Wrapper | Blogged | [blog](blog/day07-fixed-latency-operation-wrapper.md) |
-| 08 | [#8](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/8) | W1C Interrupt Status | Todo | canonical |
+| 08 | [#8](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/8) | W1C Interrupt Status | Done | canonical |
 | 09 | [#9](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/9) | LSB Priority Encoder | Done | canonical |
 | 10 | [#10](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/10) | Scoreboard Issue Control | Done | canonical |
 | 11 | [#11](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/11) | Arbitrary-depth FIFO | Todo | canonical |
