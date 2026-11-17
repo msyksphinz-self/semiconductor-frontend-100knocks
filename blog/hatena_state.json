@@ -1,0 +1,32 @@
+{
+  "entries": {
+    "file:blog/day07-fixed-latency-operation-wrapper.md": {
+      "draft": true,
+      "edit": "https://blog.hatena.ne.jp/msyksphinz/msyksphinz.hatenablog.com/atom/entry/14729835035340110613",
+      "file": "blog/day07-fixed-latency-operation-wrapper.md",
+      "id": "14729835035340110613",
+      "scheduled": "2026-11-25T04:00",
+      "updated": "2026-11-18T02:05:14",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/18/020513"
+    },
+    "file:blog/day08-w1c-interrupt-status.md": {
+      "draft": true,
+      "edit": "https://blog.hatena.ne.jp/msyksphinz/msyksphinz.hatenablog.com/atom/entry/14729835035340110615",
+      "file": "blog/day08-w1c-interrupt-status.md",
+      "id": "14729835035340110615",
+      "scheduled": "2026-11-26T04:00",
+      "updated": "2026-11-18T02:05:14",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/18/020514"
+    },
+    "file:blog/day11-arbitrary-depth-fifo.md": {
+      "draft": true,
+      "edit": "https://blog.hatena.ne.jp/msyksphinz/msyksphinz.hatenablog.com/atom/entry/14729835035340110617",
+      "file": "blog/day11-arbitrary-depth-fifo.md",
+      "id": "14729835035340110617",
+      "scheduled": "2026-11-27T04:00",
+      "updated": "2026-11-18T02:05:14",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/18/020514_1"
+    }
+  },
+  "images": {}
+}

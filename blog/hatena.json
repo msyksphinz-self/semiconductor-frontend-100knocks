@@ -1,0 +1,14 @@
+{
+  "hatena_id": "msyksphinz",
+  "blog_id": "msyksphinz.hatenablog.com",
+  "credentials": "~/.config/hatena/credentials",
+  "fotolife_folder": "sv-100knocks",
+  "root": "..",
+  "state": "hatena_state.json",
+  "repo_blob_url": "https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/blob/main",
+  "posts": {
+    "blog/day07-fixed-latency-operation-wrapper.md": null,
+    "blog/day08-w1c-interrupt-status.md": null,
+    "blog/day11-arbitrary-depth-fifo.md": null
+  }
+}
