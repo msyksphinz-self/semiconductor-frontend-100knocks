@@ -15,11 +15,11 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 
 ## 現在の進捗
 
-- Closed / Completed: 25問
+- Closed / Completed: 26問
 - Closed / Duplicate (`Replace`): 4問
 - Open / Review: 1問
-- Open / Todo: 10問
-- Open Issue合計: 11問
+- Open / Todo: 9問
+- Open Issue合計: 10問
 
 未消化問題は [Open Issues](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues?q=is%3Aissue%20state%3Aopen) だけ見れば確認できます。
 
@@ -37,7 +37,7 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 | 08 | [#8](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/8) | W1C Interrupt Status | Blogged | [blog](blog/day08-w1c-interrupt-status.md) |
 | 09 | [#9](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/9) | LSB Priority Encoder | Done | canonical |
 | 10 | [#10](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/10) | Scoreboard Issue Control | Done | canonical |
-| 11 | [#11](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/11) | Arbitrary-depth FIFO | Todo | canonical |
+| 11 | [#11](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/11) | Arbitrary-depth FIFO | Done | canonical |
 | 12 | [#12](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/12) | 2-master→1-slave Ready/Valid Fixed-priority Arbiter | Done | canonical |
 | 13 | [#13](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/13) | 2FF Synchronizer + Edge Detect | Done | canonical |
 | 14 | [#14](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/14) | Skid Buffer | Done | canonical |
