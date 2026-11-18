@@ -9,6 +9,10 @@
   "posts": {
     "blog/day07-fixed-latency-operation-wrapper.md": null,
     "blog/day08-w1c-interrupt-status.md": null,
-    "blog/day11-arbitrary-depth-fifo.md": null
+    "blog/day11-arbitrary-depth-fifo.md": null,
+    "blog/day21-store-to-load-forwarding.md": null,
+    "blog/day22-killable-pipeline.md": null,
+    "blog/day23-rr-ready-valid-arbiter.md": null,
+    "blog/day30-priority-wakeup-selector.md": null
   }
 }
