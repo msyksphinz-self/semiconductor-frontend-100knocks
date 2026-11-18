@@ -15,11 +15,11 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 
 ## 現在の進捗
 
-- Closed / Completed: 27問
+- Closed / Completed: 28問
 - Closed / Duplicate (`Replace`): 4問
 - Open / Review: 1問
-- Open / Todo: 8問
-- Open Issue合計: 9問
+- Open / Todo: 7問
+- Open Issue合計: 8問
 
 未消化問題は [Open Issues](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues?q=is%3Aissue%20state%3Aopen) だけ見れば確認できます。
 
@@ -47,7 +47,7 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 | 18 | [#18](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/18) | Credit-based Flow Control | Done | canonical |
 | 19 | [#19](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/19) | In-order Completion Queue | Blogged | [blog](blog/day19-in-order-completion-queue.md) |
 | 20 | [#20](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/20) | Banked Register File | Review | canonical |
-| 21 | [#21](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/21) | Store-to-Load Forwarding | Todo | canonical |
+| 21 | [#21](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/21) | Store-to-Load Forwarding | Blogged | [blog](blog/day21-store-to-load-forwarding.md) |
 | 22 | [#22](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/22) | Killable Pipeline | Blogged | [blog](blog/day22-killable-pipeline.md) |
 | 23 | [#23](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/23) | 2-master→1-slave RR Ready/Valid Arbiter | Todo | close to #12/#15 |
 | 24 | [#24](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/24) | Tree-PLRU Replacement Controller | Blogged | [blog](blog/day24-tree-plru.md) |
