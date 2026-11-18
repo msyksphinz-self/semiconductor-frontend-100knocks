@@ -15,11 +15,11 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 
 ## 現在の進捗
 
-- Closed / Completed: 29問
+- Closed / Completed: 30問
 - Closed / Duplicate (`Replace`): 4問
 - Open / Review: 1問
-- Open / Todo: 6問
-- Open Issue合計: 7問
+- Open / Todo: 5問
+- Open Issue合計: 6問
 
 未消化問題は [Open Issues](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues?q=is%3Aissue%20state%3Aopen) だけ見れば確認できます。
 
@@ -56,7 +56,7 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 | 27 | [#27](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/27) | 2-bit Saturating Counter BHT Branch Predictor | Blogged | canonical |
 | 28 | [#28](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/28) | Load Aligner | Blogged | canonical |
 | 29 | [#29](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/29) | Store Aligner / Byte Enable Generator | Blogged | canonical |
-| 30 | [#30](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/30) | Priority Encoder + Wakeup Selector | Todo | canonical |
+| 30 | [#30](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/30) | Priority Encoder + Wakeup Selector | Blogged | [blog](blog/day30-priority-wakeup-selector.md) |
 | 31 | [#31](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/31) | Leading Zero Counter | Blogged | canonical |
 | 32 | [#32](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/32) | 2-source Operand Wakeup | Todo | close to #30/#10; no further similar variants |
 | 33 | [#33](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/33) | 2-way Cache Tag Lookup + Multi-hit Detection | Todo | canonical |
