@@ -13,6 +13,10 @@
     "blog/day21-store-to-load-forwarding.md": null,
     "blog/day22-killable-pipeline.md": null,
     "blog/day23-rr-ready-valid-arbiter.md": null,
-    "blog/day30-priority-wakeup-selector.md": null
+    "blog/day30-priority-wakeup-selector.md": null,
+    "blog/day32-two-source-operand-wakeup.md": null,
+    "blog/day33-cache-tag-lookup.md": null,
+    "blog/day37-byte-store-load-forward.md": null,
+    "blog/day38-load-queue-violation.md": null
   }
 }

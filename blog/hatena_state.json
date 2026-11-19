@@ -62,6 +62,42 @@
       "scheduled": "2026-12-01T04:00",
       "updated": "2026-11-18T23:27:53",
       "url": "https://msyksphinz.hatenablog.com/entry/2026/11/18/232753"
+    },
+    "file:blog/day32-two-source-operand-wakeup.md": {
+      "draft": true,
+      "edit": "https://blog.hatena.ne.jp/msyksphinz/msyksphinz.hatenablog.com/atom/entry/14729835035341024501",
+      "file": "blog/day32-two-source-operand-wakeup.md",
+      "id": "14729835035341024501",
+      "scheduled": "2026-12-02T04:00",
+      "updated": "2026-11-19T23:02:32",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/19/230231"
+    },
+    "file:blog/day33-cache-tag-lookup.md": {
+      "draft": true,
+      "edit": "https://blog.hatena.ne.jp/msyksphinz/msyksphinz.hatenablog.com/atom/entry/14729835035341024503",
+      "file": "blog/day33-cache-tag-lookup.md",
+      "id": "14729835035341024503",
+      "scheduled": "2026-12-03T04:00",
+      "updated": "2026-11-19T23:02:32",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/19/230232"
+    },
+    "file:blog/day37-byte-store-load-forward.md": {
+      "draft": true,
+      "edit": "https://blog.hatena.ne.jp/msyksphinz/msyksphinz.hatenablog.com/atom/entry/14729835035341024505",
+      "file": "blog/day37-byte-store-load-forward.md",
+      "id": "14729835035341024505",
+      "scheduled": "2026-12-04T04:00",
+      "updated": "2026-11-19T23:02:32",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/19/230232_1"
+    },
+    "file:blog/day38-load-queue-violation.md": {
+      "draft": true,
+      "edit": "https://blog.hatena.ne.jp/msyksphinz/msyksphinz.hatenablog.com/atom/entry/14729835035341024507",
+      "file": "blog/day38-load-queue-violation.md",
+      "id": "14729835035341024507",
+      "scheduled": "2026-12-05T04:00",
+      "updated": "2026-11-19T23:02:33",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/19/230232_2"
     }
   },
   "images": {}
