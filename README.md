@@ -15,11 +15,11 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 
 ## 現在の進捗
 
-- Closed / Completed: 30問
+- Closed / Completed: 31問
 - Closed / Duplicate (`Replace`): 4問
 - Open / Review: 1問
-- Open / Todo: 5問
-- Open Issue合計: 6問
+- Open / Todo: 4問
+- Open Issue合計: 5問
 
 未消化問題は [Open Issues](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues?q=is%3Aissue%20state%3Aopen) だけ見れば確認できます。
 
@@ -58,7 +58,7 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 | 29 | [#29](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/29) | Store Aligner / Byte Enable Generator | Blogged | canonical |
 | 30 | [#30](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/30) | Priority Encoder + Wakeup Selector | Blogged | [blog](blog/day30-priority-wakeup-selector.md) |
 | 31 | [#31](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/31) | Leading Zero Counter | Blogged | canonical |
-| 32 | [#32](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/32) | 2-source Operand Wakeup | Todo | close to #30/#10; no further similar variants |
+| 32 | [#32](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/32) | 2-source Operand Wakeup | Blogged | [blog](blog/day32-two-source-operand-wakeup.md) |
 | 33 | [#33](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/33) | 2-way Cache Tag Lookup + Multi-hit Detection | Todo | canonical |
 | 34 | [#34](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/34) | Reset Synchronizer — Async Assert / Sync Deassert | Done | canonical |
 | 35 | [#35](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/35) | Pulse Synchronizer | Replace | duplicate of #5 |
