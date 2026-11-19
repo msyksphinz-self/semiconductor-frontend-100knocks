@@ -15,11 +15,11 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 
 ## 現在の進捗
 
-- Closed / Completed: 33問
+- Closed / Completed: 34問
 - Closed / Duplicate (`Replace`): 4問
 - Open / Review: 1問
-- Open / Todo: 2問
-- Open Issue合計: 3問
+- Open / Todo: 1問
+- Open Issue合計: 2問
 
 未消化問題は [Open Issues](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues?q=is%3Aissue%20state%3Aopen) だけ見れば確認できます。
 
@@ -64,7 +64,7 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 | 35 | [#35](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/35) | Pulse Synchronizer | Replace | duplicate of #5 |
 | 36 | [#36](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/36) | 2-bit Saturating Counter | Replace | subset/duplicate of #27 |
 | 37 | [#37](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/37) | Byte-granular Store-to-Load Forwarding | Blogged | [blog](blog/day37-byte-store-load-forward.md) |
-| 38 | [#38](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/38) | Load Queue Memory Ordering Violation Detection | Todo | canonical |
+| 38 | [#38](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/38) | Load Queue Memory Ordering Violation Detection | Blogged | [blog](blog/day38-load-queue-violation.md) |
 | 39 | [#39](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/39) | SECDED ECC Encoder / Decoder | Replace | duplicate of #25 |
 | 40 | [#40](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/40) | AXI Burst Address Generator | Todo | canonical |
 
