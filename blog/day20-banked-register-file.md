@@ -216,4 +216,4 @@ posedgeより後 : read_data = new value
 
 また、parameterizeでは「bankの数」「各bankのentry数」「そのaddress幅」を混同しないことが大事だった。
 
-**シミュレータでのコンパイル・テストベンチ実行は未実施。** bank conflict、read-during-write、reset、`NUM_BANKS=4`は机上で確認しただけである。Issueの必須テスト10項目は実行していない。
+**Verilatorのlint（`--lint-only -Wall`）は、`NUM_REGS/NUM_BANKS`を32/2、32/4、8/2、8/4にしてエラーも警告もなく通した（ファイル名に関する警告を除く）。対象外にした`NUM_REGS == NUM_BANKS`（4/4、2/2）は、幅0のpart-selectでエラーになる。シミュレーションとテストベンチ実行は未実施である。** bank conflict、read-during-write、reset、`NUM_BANKS=4`の動作は机上で確認しただけである。Issueの必須テスト10項目は実行していない。
