@@ -6,8 +6,8 @@
       "file": "blog/day07-fixed-latency-operation-wrapper.md",
       "id": "14729835035340110613",
       "scheduled": "2026-11-25T04:00",
-      "updated": "2026-11-18T02:05:14",
-      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/18/020513"
+      "updated": "2026-11-22T14:58:49",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/22/145848"
     },
     "file:blog/day08-w1c-interrupt-status.md": {
       "draft": true,
@@ -15,8 +15,8 @@
       "file": "blog/day08-w1c-interrupt-status.md",
       "id": "14729835035340110615",
       "scheduled": "2026-11-26T04:00",
-      "updated": "2026-11-18T02:05:14",
-      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/18/020514"
+      "updated": "2026-11-22T14:58:49",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/22/145849"
     },
     "file:blog/day11-arbitrary-depth-fifo.md": {
       "draft": true,
@@ -24,8 +24,8 @@
       "file": "blog/day11-arbitrary-depth-fifo.md",
       "id": "14729835035340110617",
       "scheduled": "2026-11-27T04:00",
-      "updated": "2026-11-18T02:05:14",
-      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/18/020514_1"
+      "updated": "2026-11-22T14:58:49",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/22/145849_1"
     },
     "file:blog/day20-banked-register-file.md": {
       "draft": true,
@@ -33,8 +33,8 @@
       "file": "blog/day20-banked-register-file.md",
       "id": "14729835035342273201",
       "scheduled": "2026-12-06T04:00",
-      "updated": "2026-11-22T14:13:28",
-      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/22/141328"
+      "updated": "2026-11-22T14:58:52",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/22/145852"
     },
     "file:blog/day21-store-to-load-forwarding.md": {
       "draft": true,
@@ -42,8 +42,8 @@
       "file": "blog/day21-store-to-load-forwarding.md",
       "id": "14729835035340530022",
       "scheduled": "2026-11-28T04:00",
-      "updated": "2026-11-18T23:27:52",
-      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/18/232752"
+      "updated": "2026-11-22T14:58:50",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/22/145849_2"
     },
     "file:blog/day22-killable-pipeline.md": {
       "draft": true,
@@ -51,8 +51,8 @@
       "file": "blog/day22-killable-pipeline.md",
       "id": "14729835035340530029",
       "scheduled": "2026-11-29T04:00",
-      "updated": "2026-11-18T23:27:52",
-      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/18/232752_1"
+      "updated": "2026-11-22T14:58:50",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/22/145850"
     },
     "file:blog/day23-rr-ready-valid-arbiter.md": {
       "draft": true,
@@ -60,8 +60,8 @@
       "file": "blog/day23-rr-ready-valid-arbiter.md",
       "id": "14729835035340530032",
       "scheduled": "2026-11-30T04:00",
-      "updated": "2026-11-18T23:27:53",
-      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/18/232752_2"
+      "updated": "2026-11-22T14:58:50",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/22/145850_1"
     },
     "file:blog/day30-priority-wakeup-selector.md": {
       "draft": true,
@@ -69,8 +69,8 @@
       "file": "blog/day30-priority-wakeup-selector.md",
       "id": "14729835035340530036",
       "scheduled": "2026-12-01T04:00",
-      "updated": "2026-11-18T23:27:53",
-      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/18/232753"
+      "updated": "2026-11-22T14:58:50",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/22/145850_2"
     },
     "file:blog/day32-two-source-operand-wakeup.md": {
       "draft": true,
@@ -78,8 +78,8 @@
       "file": "blog/day32-two-source-operand-wakeup.md",
       "id": "14729835035341024501",
       "scheduled": "2026-12-02T04:00",
-      "updated": "2026-11-19T23:02:32",
-      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/19/230231"
+      "updated": "2026-11-22T14:58:51",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/22/145850_3"
     },
     "file:blog/day33-cache-tag-lookup.md": {
       "draft": true,
@@ -87,8 +87,8 @@
       "file": "blog/day33-cache-tag-lookup.md",
       "id": "14729835035341024503",
       "scheduled": "2026-12-03T04:00",
-      "updated": "2026-11-19T23:02:32",
-      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/19/230232"
+      "updated": "2026-11-22T14:58:51",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/22/145851"
     },
     "file:blog/day37-byte-store-load-forward.md": {
       "draft": true,
@@ -96,8 +96,8 @@
       "file": "blog/day37-byte-store-load-forward.md",
       "id": "14729835035341024505",
       "scheduled": "2026-12-04T04:00",
-      "updated": "2026-11-19T23:02:32",
-      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/19/230232_1"
+      "updated": "2026-11-22T14:58:51",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/22/145851_1"
     },
     "file:blog/day38-load-queue-violation.md": {
       "draft": true,
@@ -105,8 +105,8 @@
       "file": "blog/day38-load-queue-violation.md",
       "id": "14729835035341024507",
       "scheduled": "2026-12-05T04:00",
-      "updated": "2026-11-19T23:02:33",
-      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/19/230232_2"
+      "updated": "2026-11-22T14:58:52",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/22/145851_2"
     },
     "file:blog/day40-axi-burst-addr-gen.md": {
       "draft": true,
@@ -114,8 +114,8 @@
       "file": "blog/day40-axi-burst-addr-gen.md",
       "id": "14729835035342340583",
       "scheduled": "2026-12-07T04:00",
-      "updated": "2026-11-22T14:53:06",
-      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/22/145306"
+      "updated": "2026-11-22T14:58:52",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/22/145852_1"
     }
   },
   "images": {}
