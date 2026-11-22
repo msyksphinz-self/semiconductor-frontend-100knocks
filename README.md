@@ -18,8 +18,8 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 - Closed / Completed: 36問
 - Closed / Duplicate (`Replace`): 4問
 - Open / Review: 0問
-- Open / Todo: 0問
-- Open Issue合計: 0問
+- Open / Todo: 20問
+- Open Issue合計: 20問
 
 未消化問題は [Open Issues](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues?q=is%3Aissue%20state%3Aopen) だけ見れば確認できます。
 
@@ -67,6 +67,26 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 | 38 | [#38](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/38) | Load Queue Memory Ordering Violation Detection | Blogged | [blog](blog/day38-load-queue-violation.md) |
 | 39 | [#39](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/39) | SECDED ECC Encoder / Decoder | Replace | duplicate of #25 |
 | 40 | [#40](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/40) | AXI Burst Address Generator | Blogged | [blog](blog/day40-axi-burst-addr-gen.md) |
+| 41 | [#41](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/41) | Gray Code Counter | Todo | canonical |
+| 42 | [#42](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/42) | Multi-bit CDC Handshake (4-phase req/ack) | Todo | canonical |
+| 43 | [#43](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/43) | Asynchronous FIFO | Todo | canonical |
+| 44 | [#44](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/44) | UART Transmitter (8N1) | Todo | canonical |
+| 45 | [#45](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/45) | UART Receiver (8N1, 16x Oversampling) | Todo | canonical |
+| 46 | [#46](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/46) | SPI Master (mode 0 / mode 3) | Todo | canonical |
+| 47 | [#47](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/47) | Ready/Valid Width Converter (32→8, 8→32) | Todo | canonical |
+| 48 | [#48](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/48) | Barrel Shifter | Todo | canonical |
+| 49 | [#49](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/49) | Saturating Adder / Subtractor | Todo | canonical |
+| 50 | [#50](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/50) | Sequential Multiplier (shift-add) | Todo | canonical |
+| 51 | [#51](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/51) | Sequential Divider (restoring, RISC-V rules) | Todo | canonical |
+| 52 | [#52](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/52) | CRC-32 (8-bit parallel) | Todo | canonical |
+| 53 | [#53](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/53) | PWM + Prescaler (shadow register) | Todo | canonical |
+| 54 | [#54](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/54) | FIFO on a Synchronous-read SRAM | Todo | canonical |
+| 55 | [#55](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/55) | SRAM Read-During-Write Bypass | Todo | canonical |
+| 56 | [#56](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/56) | AXI4-Lite Slave Register Block | Todo | canonical |
+| 57 | [#57](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/57) | Blocking Direct-mapped Cache (read-only) | Todo | canonical |
+| 58 | [#58](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/58) | Physical Register Free List | Todo | canonical |
+| 59 | [#59](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/59) | RISC-V CSR Bank + Illegal Access Check | Todo | canonical |
+| 60 | [#60](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/60) | Age Matrix Oldest-first Select | Todo | canonical |
 
 ## Statusの意味
 
