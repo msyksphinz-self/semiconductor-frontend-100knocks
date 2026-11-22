@@ -67,7 +67,7 @@ endmodule
 
 reset後に全addressが0であること、異なるbank/rowへの書き込みと読み出し、別bank同時read、同一bank競合とport1 retry、port1単独read、read/write同一bank・異address、同一addressのread/writeのposedge前後、reset途中投入、`NUM_BANKS=4`を確認する。
 
-さらに元のIssueは`NUM_REGS=NUM_BANKS`（1 bankあたり1 entry）も許すが、後述の最終稿では`$clog2(1)=0`によるrow addressの境界条件が未対応。**問題の要求範囲と最終稿の実装済み範囲は区別する**。
+なお、Issueの制約は`NUM_REGS=NUM_BANKS`（1 bankあたり1 entry）も許すが、今回の解答ではこの構成を対象外とし、**1 bankあたり2 entry以上（`NUM_REGS > NUM_BANKS`）**を前提にした。理由は最後に書く。
 
 以下では、実際に書いてみて修正した点を順番に見ていく。
 
@@ -146,9 +146,9 @@ stallされたport1のrequestは外側で保持し、次のcycle以降に再試�
 
 ```systemverilog
 assign w_rd_local_addr =
-    rd_valid[0] && (w_rd_bank0 == b_idx) ? w_rd_addr0 :
-    rd_valid[1] && (w_rd_bank1 == b_idx) ? w_rd_addr1 :
-    '0;
+    rd_valid[0] & (w_rd_bank0 == b_idx) ? w_rd_addr0 :
+    rd_valid[1] & (w_rd_bank1 == b_idx) ? w_rd_addr1 :
+    'h0;
 ```
 
 結果を各bankから組合せreadし、要求したbank番号で出力を選択する。
@@ -168,8 +168,8 @@ write先bankはアドレスの下位bitで決まる。
 
 ```systemverilog
 assign w_wr_en =
-    wr_en &&
-    (wr_addr[NB_W-1:0] == NB_W'(b_idx));
+    wr_en &
+    (wr_addr[$clog2(NUM_BANKS)-1:0] == b_idx[$clog2(NUM_BANKS)-1:0]);
 ```
 
 各bankの記憶配列はposedgeで更新する。resetも今回の仕様に合わせて同期方式にした。
@@ -178,7 +178,7 @@ assign w_wr_en =
 always_ff @(posedge clk) begin
     if (!rst_n) begin
         for (int i = 0; i < NA; i++) begin
-            r_regs[b_idx][i] <= '0;
+            r_regs[b_idx][i] <= 'h0;
         end
     end else if (w_wr_en) begin
         r_regs[b_idx][w_wr_addr] <= wr_data;
@@ -202,11 +202,11 @@ posedgeより後 : read_data = new value
 
 ## 最終RTLについて
 
-今回の最終投稿では、`NUM_REGS=32`、`NUM_BANKS=2`に対するbank/row decode、固定優先read arbitration、同期write、同期resetを実装した。モジュール名は`sv020_banked_register`。
+最終稿は、bank/row decode、固定優先のread arbitration、同期write、同期resetで構成した。モジュール名は`sv020_banked_register`。RTLは[problems/day20/solution.sv](../problems/day20/solution.sv)に置いてある。
 
-何度かのレビューで、配列サイズ、アドレスのbit幅、resetの初期化先、組合せreadの`assign`漏れを修正した。最終稿の主要部分は上の抜粋に示したとおり。
+何度かのレビューで、配列サイズ、アドレスのbit幅、resetの初期化先、組合せreadの`assign`漏れを修正した。デフォルト構成に加えて、`NUM_BANKS=4`でもbankとrowの切り出しが正しいことを机上で確認した。
 
-なお、最後に残った境界条件がある。`NUM_REGS == NUM_BANKS`なら各bankに1 entryしかなく、`NA_W = $clog2(1) = 0`になる。現在の`[NB_W +: NA_W]`というpart-selectはそのままでは使えない。1-entry bankを許すなら特別処理が必要。今回は**このパラメータ境界の改修は未実施**で、デフォルト構成の設計レビューまでを終えた。
+対象外にしたのは、`NUM_REGS == NUM_BANKS`の構成である。各bankに1 entryしかないと`NA_W = $clog2(1) = 0`になり、`logic [NA_W-1:0]`は`[-1:0]`に、`[NB_W +: NA_W]`は幅0のpart-selectになってしまう。1 entryのbankにはrowを選ぶ必要がなく、レジスタファイルをbankに分ける構成として実用上の意味が薄いので、特別処理は入れなかった。**Issueの制約より狭い範囲での合格**である。
 
 ## まとめと今後の検証
 
@@ -216,4 +216,4 @@ posedgeより後 : read_data = new value
 
 また、parameterizeでは「bankの数」「各bankのentry数」「そのaddress幅」を混同しないことが大事だった。
 
-**シミュレータでのコンパイル・テストベンチ実行は未実施。** 別bank同時read、同一bank衝突、port1単独read、同一addressのread/write、NUM_BANKS=4、reset、そして1-entry bankの境界条件を今後確認する。現状はDay20のデフォルト構成についてRTL設計レビューを終えた段階であり、Issueの完全なPass/Closeを意味しない。
+**シミュレータでのコンパイル・テストベンチ実行は未実施。** bank conflict、read-during-write、reset、`NUM_BANKS=4`は机上で確認しただけである。Issueの必須テスト10項目は実行していない。

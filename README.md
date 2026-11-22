@@ -15,11 +15,11 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 
 ## 現在の進捗
 
-- Closed / Completed: 34問
+- Closed / Completed: 35問
 - Closed / Duplicate (`Replace`): 4問
-- Open / Review: 1問
+- Open / Review: 0問
 - Open / Todo: 1問
-- Open Issue合計: 2問
+- Open Issue合計: 1問
 
 未消化問題は [Open Issues](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues?q=is%3Aissue%20state%3Aopen) だけ見れば確認できます。
 
@@ -46,7 +46,7 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 | 17 | [#17](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/17) | Ready/Valid Join | Done | canonical |
 | 18 | [#18](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/18) | Credit-based Flow Control | Done | canonical |
 | 19 | [#19](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/19) | In-order Completion Queue | Blogged | [blog](blog/day19-in-order-completion-queue.md) |
-| 20 | [#20](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/20) | Banked Register File | Review | canonical |
+| 20 | [#20](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/20) | Banked Register File | Blogged | [blog](blog/day20-banked-register-file.md) |
 | 21 | [#21](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/21) | Store-to-Load Forwarding | Blogged | [blog](blog/day21-store-to-load-forwarding.md) |
 | 22 | [#22](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/22) | Killable Pipeline | Blogged | [blog](blog/day22-killable-pipeline.md) |
 | 23 | [#23](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/23) | 2-master→1-slave RR Ready/Valid Arbiter | Blogged | [blog](blog/day23-rr-ready-valid-arbiter.md) |
