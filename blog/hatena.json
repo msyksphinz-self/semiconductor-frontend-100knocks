@@ -17,6 +17,7 @@
     "blog/day32-two-source-operand-wakeup.md": null,
     "blog/day33-cache-tag-lookup.md": null,
     "blog/day37-byte-store-load-forward.md": null,
-    "blog/day38-load-queue-violation.md": null
+    "blog/day38-load-queue-violation.md": null,
+    "blog/day20-banked-register-file.md": null
   }
 }
