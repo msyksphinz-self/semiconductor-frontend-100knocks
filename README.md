@@ -67,7 +67,7 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 | 38 | [#38](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/38) | Load Queue Memory Ordering Violation Detection | Blogged | [blog](blog/day38-load-queue-violation.md) |
 | 39 | [#39](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/39) | SECDED ECC Encoder / Decoder | Replace | duplicate of #25 |
 | 40 | [#40](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/40) | AXI Burst Address Generator | Blogged | [blog](blog/day40-axi-burst-addr-gen.md) |
-| 41 | [#41](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/41) | Gray Code Counter | Done | canonical |
+| 41 | [#41](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/41) | Gray Code Counter | Blogged | [blog](blog/day41-gray-counter.md) |
 | 42 | [#42](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/42) | Multi-bit CDC Handshake (4-phase req/ack) | Todo | canonical |
 | 43 | [#43](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/43) | Asynchronous FIFO | Todo | canonical |
 | 44 | [#44](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/44) | UART Transmitter (8N1) | Todo | canonical |
