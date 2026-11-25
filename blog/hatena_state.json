@@ -132,9 +132,15 @@
       "file": "blog/day42-cdc-handshake.md",
       "id": "14729835035343771168",
       "scheduled": "2026-12-09T04:00",
-      "updated": "2026-11-25T13:27:01",
-      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/25/132700"
+      "updated": "2026-11-25T13:29:01",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/25/132901"
     }
   },
-  "images": {}
+  "images": {
+    "86c60a80b522e415867a5a1cb9731047d658e169c67c854afa0013c6fac1a3d2": {
+      "file": "blog/figures/day42-handshake-wave.png",
+      "syntax": "f:id:msyksphinz:20261125132854p:image",
+      "url": "https://cdn-ak.f.st-hatena.com/images/fotolife/m/msyksphinz/20261125/20261125132854.png"
+    }
+  }
 }
