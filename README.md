@@ -15,11 +15,11 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 
 ## 現在の進捗
 
-- Closed / Completed: 38問
+- Closed / Completed: 39問
 - Closed / Duplicate (`Replace`): 4問
 - Open / Review: 0問
-- Open / Todo: 18問
-- Open Issue合計: 18問
+- Open / Todo: 17問
+- Open Issue合計: 17問
 
 未消化問題は [Open Issues](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues?q=is%3Aissue%20state%3Aopen) だけ見れば確認できます。
 
@@ -69,7 +69,7 @@ SystemVerilog RTL / マイクロアーキテクチャ設計の100本ノックを
 | 40 | [#40](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/40) | AXI Burst Address Generator | Blogged | [blog](blog/day40-axi-burst-addr-gen.md) |
 | 41 | [#41](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/41) | Gray Code Counter | Blogged | [blog](blog/day41-gray-counter.md) |
 | 42 | [#42](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/42) | Multi-bit CDC Handshake (4-phase req/ack) | Blogged | [blog](blog/day42-cdc-handshake.md) |
-| 43 | [#43](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/43) | Asynchronous FIFO | Todo | canonical |
+| 43 | [#43](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/43) | Asynchronous FIFO | Blogged | [blog](blog/day43-async-fifo.md) |
 | 44 | [#44](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/44) | UART Transmitter (8N1) | Todo | canonical |
 | 45 | [#45](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/45) | UART Receiver (8N1, 16x Oversampling) | Todo | canonical |
 | 46 | [#46](https://github.com/msyksphinz-self/semiconductor-frontend-100knocks/issues/46) | SPI Master (mode 0 / mode 3) | Todo | canonical |

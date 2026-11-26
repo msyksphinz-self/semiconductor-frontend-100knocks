@@ -21,6 +21,7 @@
     "blog/day20-banked-register-file.md": null,
     "blog/day40-axi-burst-addr-gen.md": null,
     "blog/day41-gray-counter.md": null,
-    "blog/day42-cdc-handshake.md": null
+    "blog/day42-cdc-handshake.md": null,
+    "blog/day43-async-fifo.md": null
   }
 }
