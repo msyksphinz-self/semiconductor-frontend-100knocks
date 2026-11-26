@@ -134,9 +134,23 @@
       "scheduled": "2026-12-09T04:00",
       "updated": "2026-11-25T13:29:01",
       "url": "https://msyksphinz.hatenablog.com/entry/2026/11/25/132901"
+    },
+    "file:blog/day43-async-fifo.md": {
+      "draft": true,
+      "edit": "https://blog.hatena.ne.jp/msyksphinz/msyksphinz.hatenablog.com/atom/entry/14729835035344331034",
+      "file": "blog/day43-async-fifo.md",
+      "id": "14729835035344331034",
+      "scheduled": "2026-12-10T04:00",
+      "updated": "2026-11-26T16:03:51",
+      "url": "https://msyksphinz.hatenablog.com/entry/2026/11/26/160351"
     }
   },
   "images": {
+    "7d15adfdc9b9d38bb37e0af654c7f2676affb7dc1ab81b3ac8c64cfcf58d2480": {
+      "file": "blog/figures/day43-async-fifo-wave.png",
+      "syntax": "f:id:msyksphinz:20261126160344p:image",
+      "url": "https://cdn-ak.f.st-hatena.com/images/fotolife/m/msyksphinz/20261126/20261126160344.png"
+    },
     "86c60a80b522e415867a5a1cb9731047d658e169c67c854afa0013c6fac1a3d2": {
       "file": "blog/figures/day42-handshake-wave.png",
       "syntax": "f:id:msyksphinz:20261125132854p:image",
